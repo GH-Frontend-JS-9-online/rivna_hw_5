@@ -1,0 +1,330 @@
+@import "default.scss";
+
+//перемінні
+$tt: uppercase;
+$fw: 700;
+
+//шаблони
+%link{
+        color: #fa5c65;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: $tt; 
+        font-weight: 700;
+    img{
+        display: inline-block;
+        margin-top: 2%;
+        }
+}
+
+%title{
+    color: #465065;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $fw;
+    text-transform: $tt;
+    span{
+        color: #f0454c;
+    }
+}
+
+%text{
+    color: #9aa0ab;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+%member-name{
+    color: #314a5b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: $fw;
+    text-transform: $tt;
+}
+
+@mixin ml($ml){
+    margin-left: -4px;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    max-width: 941px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    background: url("../img/header_bg.png") -4px center/ 100% 100% no-repeat;
+    height: 169%;
+}
+
+.header__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 140px;
+    height: 74px;
+    background-color: #fa5c65;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    a{
+        display: inline-block;
+        padding: 43px 11px 10px 14px;
+    }
+
+}
+
+.logo__link{
+    color: #ffffff;
+    font-family: 'Domine', serif;
+    font-size: 20px;
+    font-weight: $fw;
+}
+
+.logo__text{
+    color: #314a5b;
+    @include ml(-4px);
+}
+
+.header__menu{
+    padding-top: 26px;
+}
+
+.header__list{
+    display: flex;
+}
+
+.header__item{
+    padding-left: 40px;
+}
+
+.header__link{
+    color: #263742;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: $tt;
+    font-weight: $fw;
+}
+
+.header__icon{
+    color: #fa5c65;
+    padding: 0 0 0 20px;
+}
+
+.header__title{
+    @extend %title;
+    font-size: 48px;
+    padding-top: 300px;
+    width: 60%;
+    letter-spacing: -1.44px;
+    line-height: 53px;
+
+}
+
+.header__subtitle{
+    color: #314a5b;
+    font-size: 20px;
+    padding: 13px 0 41px 0;
+}
+.header__button{
+    padding: 27px 0 0 42px;
+}
+
+.button{
+    width: 171px;
+    height: 64px;
+    background-color: #fa5c65;
+    border-radius: 10px;
+} 
+
+.button__link{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: $fw;
+    text-transform: $tt;
+}
+
+.header__burger{
+    display: none;
+}
+.info{
+    padding-top: 82px;
+    margin-left: -53px;
+}
+.info__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    margin-left: 53px;
+}
+
+.info__item{
+    @extend %text;
+    width: 27%;
+}
+
+.item__title{
+    @extend %title;
+    padding-bottom: 20px;
+    font-size: 26px;
+}
+
+.item__text{
+    padding-bottom: 29px
+}
+
+.item__link{
+    padding-bottom: 57px
+}
+
+.lihk__text{
+    @extend %link;   
+}
+
+.works{
+    padding-bottom: 75px;
+}
+
+.works__row{
+    display: flex;
+}
+
+.works__body{
+    margin: 0 0 0 81px;
+}
+
+.works__title {
+    h2{
+        @extend %title;
+        font-size: 40px;
+        letter-spacing: -1.2px;
+    span{
+        letter-spacing: -1.2px;   
+    }   
+        margin-bottom: 17px;
+}    
+}
+
+.works__subtitle{
+    color: #314a5b;
+    font-size: 16px;
+    margin-bottom: 29px;
+
+}
+
+.works__text{ 
+        @extend %text;
+        margin-bottom: 4%;
+        width: 80%;
+        height: 40%;  
+}
+
+.works__link{
+    img{
+        margin-top: 3px;
+        }
+}
+
+.staff__title{
+       h2{
+        @extend %title;
+        font-size: 32px;
+        letter-spacing: -0.48px;
+       } 
+        span{
+            letter-spacing: -0.48px;
+}
+        margin-bottom: 16px;
+
+}
+
+.staff__text{
+    color: #9aa0ab;
+    font-size: 16px;
+    margin-bottom: 40px;
+
+}
+.staff__row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.member__row{
+    display: flex;
+}
+
+.member__foto{
+    margin-right: 21px;
+}
+
+.member__body{
+    margin-top: 18px;
+}
+
+.member__name{
+    @extend %member-name;
+    margin-bottom: 12px;
+}
+
+.member__position{
+    color: #f0454c;
+    margin-bottom: 12px;
+}
+
+.member__hobby{
+    max-width: 150px;
+    color: #9aa0ab;
+    line-height: 20px;
+}
+
+.staff__link{
+    margin: 67px 0 62px 93%;
+}
+
+hr{
+    width: 99%;
+    height: 1px;
+    background-color: #e6eaed;
+    margin-bottom: 34px;
+}
+
+.footer__row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icons{
+    display: flex;
+    display: inline-block;
+    width: 30%;
+    margin-left: -22px;
+}
+
+.icon__link{
+    color: #b9c0c6;
+    margin-left: 22px;
+}
+
+.footer__licence{
+    margin-bottom: 43px;
+}
+.licence__body{
+    display: inline-block;
+}
+
+.licence__icon{
+    color: #b9c0c6;
+}
+.licence__text{
+    width: 28%;
+    color: #b9c0c6;
+    font-size: 13px;
+}
+
+@import "media.scss";
